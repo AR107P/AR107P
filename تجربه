@@ -1,0 +1,22 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("سكربت عربي", "BloodTheme")
+local Tab = Window:NewTab("اوتو فارم كلك")
+local Section = Tab:NewSection("اوتو فارم كلك تراه تجربه")
+Section:NewButton("اوتو كلك", "اوتو كلك", function()
+    print("ASIfhauoshuwqor")
+end)
+Section:NewToggle("اوتو كلك", "اوتو كلك", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+        else
+        print("ASIfhauoshuwqor")
+    end
+end)
+getgenv().AutoClick
+
+Section:NewKeybind("الاوتو", "الاوتو عشان يكون يضغط بدالك", Enum.KeyCode.F, function()
+	print("AutoClick")
+end)
