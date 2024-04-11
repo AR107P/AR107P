@@ -1,3 +1,9 @@
+wait(0.1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "تم تفعيل" ;
+    Text = "السكربت عربي"; -- ARAB TEAM --
+    Duration = 5;
+})
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("سكربت عربي", "BloodTheme")
 local Tab = Window:NewTab("اوتو فارم كلك")
@@ -20,3 +26,15 @@ getgenv().AutoClick
 Section:NewKeybind("الاوتو", "الاوتو عشان يكون يضغط بدالك", Enum.KeyCode.F, function()
 	print("AutoClick")
 end)
+Section:NewLabel("السكربت كيف")
+
+local Tab = Window:NewTab("تحكم ب شخصيه")
+local Section = Tab:NewSection("تحكم ب شخصيه")
+ 
+Section:NewSlider("سرعه", "سرعت شخصيه", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+ 
+Section:NewSlider("نط", "نط شخصيه", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.jumpPower = s
+end) --ARAB TEAM--
